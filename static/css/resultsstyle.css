@@ -1,0 +1,89 @@
+body {
+    background-image: url("https://www.compass.com/m/557816d002a067dfbdf7de594ad0bf5b67517902_img_1_343d8/origin.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #fff;
+    animation: fadeInBody 1.5s ease-in-out;
+}
+
+@keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blurring the background */
+    margin: 100px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: bounceIn 2s ease-out forwards;
+    opacity: 0;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Glowing border */
+}
+
+@keyframes bounceIn {
+    0% { opacity: 0; transform: translateY(50px); }
+    60% { transform: translateY(-20px); }
+    80% { transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Glowing hover effect on container */
+.container:hover {
+    border: 2px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Gradient animated text for h2 */
+h2 {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #ff6b6b, #f7d794, #82ccdd);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200% 200%;
+    animation: gradientMove 5s ease infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fancy fading animation for features text */
+.features {
+    font-size: 1.7rem;
+    color: #fff;
+    animation: fadeInText 2.5s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animated glow for the expected price */
+h1 {
+    font-size: 2.2rem;
+    color: #f1c40f;
+    text-shadow: 0 0 20px rgba(241, 196, 15, 0.6), 0 0 30px rgba(241, 196, 15, 0.8);
+    animation: glow 2s ease-in-out infinite alternate;
+    margin-top: 30px;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px rgba(241, 196, 15, 0.4), 0 0 20px rgba(241, 196, 15, 0.6); }
+    100% { text-shadow: 0 0 30px rgba(241, 196, 15, 1), 0 0 50px rgba(241, 196, 15, 1); }
+}

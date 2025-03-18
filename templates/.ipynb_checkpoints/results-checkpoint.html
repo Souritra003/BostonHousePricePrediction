@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/resultsstyle.css') }}">
+    </head>
+    <body>
+        <div class="container">   
+            <h2>
+                Price of the house with the features:
+            </h2>
+            <p class="features">
+                Average number of rooms per dwelling: {{rm}} <br>
+                Pupil-teacher ratio: {{pt}} <br>
+                Percentage of the population that belongs to the lower socioeconomic status: {{lstat}}
+            </p>
+            <h1>Expected Price of the house with your desired features is: {{prediction}}</h1>
+        </div>
+</script>
+    </body>
+</html>

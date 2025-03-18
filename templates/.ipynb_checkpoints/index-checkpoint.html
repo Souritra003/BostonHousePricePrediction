@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/indexstyle.css') }}">
+</head>
+
+<body>
+
+<h2>Welcome to Boston, the city where history meets innovation! Whether you're here to explore the Freedom Trail, enjoy the vibrant arts scene, or dive into the local sports culture, Boston has something for everyone. From our charming neighborhoods to our world-class universities and seafood, we’re sure you’ll feel right at home. Enjoy your time in the Hub of the Universe!</h2>
+
+<form action="{{ url_for('get_value') }}" method="post" onsubmit="return validateForm()">
+  <div class="container">
+    <h1>Boston House Price Prediction Model</h1>
+    <hr>
+
+    <p><b>Rm Value:</b> Range from 1 to 8</p>
+    <label for="rm"><b>RM Value</b></label>
+    <input type="text" placeholder="Enter RM Value" name="rm" id="rm" required>
+
+    <p><b>PT Ratio Value:</b> Range from 10 to 20</p>
+    <label for="pt"><b>PT Ratio</b></label>
+    <input type="text" placeholder="Enter PT Ratio Value" name="pt" id="pt" required>
+
+    <p><b>LSTAT Value:</b> Lower state of the population % (Range: 10 to 30)</p>
+    <label for="lstat"><b>LSTAT Value</b></label>
+    <input type="text" placeholder="Enter LSTAT Value" name="lstat" id="lstat" required>
+
+    <hr>
+
+    <button type="submit" class="registerbtn">Submit</button>
+  </div>
+</form>
+<script src="{{ url_for('static', filename='js/indexscript.js') }}"></script>
+
+</body>
+</html>
